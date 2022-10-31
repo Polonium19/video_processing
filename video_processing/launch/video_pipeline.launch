@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+  <node pkg="video_streamer" type="file_streamer" name="file_streamer">
+    <param name="file" type="string" value="/home/polonium/Projects/work_ws/src/VideoProcessing/video_processing/videos/2022-08-31 20-27-22.mp4"/>
+  </node>
+
+  <node pkg="cv_tools" type="image_labeling" name="image_labeling"/>
+
+  <node pkg="external_device" type="external_device" name="external_device"/>
+  <node pkg="ui_tools" type="ui_tools" name="ui_tools"/>
+
+</launch>
