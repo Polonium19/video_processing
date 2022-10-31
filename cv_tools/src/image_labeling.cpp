@@ -51,7 +51,7 @@ void ImageLabelingNode::imageCallback(const sensor_msgs::CompressedImageConstPtr
     ros::Duration(PROCESSING_TIME).sleep();
 
     std_msgs::String resMsg;
-    resMsg.data = std::to_string(msg->header.seq);//"{“id”: id, “box”: [center_x, center_y, width, height]}";
+    resMsg.data = "{“id”: id, “box”: [center_x, center_y, width, height]}";
     labels_pub->publish(resMsg);
     ROS_INFO_NAMED("image_labeling", "CV: Image processed. Labels published.");
 }
